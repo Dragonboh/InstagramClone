@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84756CE72C6E47C800D939F8 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84756CE62C6E47C800D939F8 /* UserStatView.swift */; };
 		8479FC7D2C511E8200E36F3F /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479FC7C2C511E8200E36F3F /* InstagramCloneApp.swift */; };
 		8479FC7F2C511E8200E36F3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479FC7E2C511E8200E36F3F /* ContentView.swift */; };
 		8479FC812C511E8300E36F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8479FC802C511E8300E36F3F /* Assets.xcassets */; };
 		8479FC842C511E8300E36F3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8479FC832C511E8300E36F3F /* Preview Assets.xcassets */; };
 		8479FC8F2C5121B200E36F3F /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479FC8E2C5121B200E36F3F /* MainTabBarView.swift */; };
+		8479FC922C51731C00E36F3F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479FC912C51731C00E36F3F /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84756CE62C6E47C800D939F8 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 		8479FC792C511E8200E36F3F /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8479FC7C2C511E8200E36F3F /* InstagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneApp.swift; sourceTree = "<group>"; };
 		8479FC7E2C511E8200E36F3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8479FC802C511E8300E36F3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8479FC832C511E8300E36F3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8479FC8E2C5121B200E36F3F /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
+		8479FC912C51731C00E36F3F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84756CE52C6E47A500D939F8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				84756CE62C6E47C800D939F8 /* UserStatView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		8479FC702C511E8200E36F3F = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +85,8 @@
 		8479FC8A2C51218400E36F3F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				84756CE52C6E47A500D939F8 /* Components */,
+				8479FC902C51730900E36F3F /* Profile */,
 				8479FC8B2C51218C00E36F3F /* TabBar */,
 			);
 			path = Core;
@@ -84,6 +98,14 @@
 				8479FC8E2C5121B200E36F3F /* MainTabBarView.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		8479FC902C51730900E36F3F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8479FC912C51731C00E36F3F /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,8 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8479FC922C51731C00E36F3F /* ProfileView.swift in Sources */,
 				8479FC7F2C511E8200E36F3F /* ContentView.swift in Sources */,
 				8479FC8F2C5121B200E36F3F /* MainTabBarView.swift in Sources */,
+				84756CE72C6E47C800D939F8 /* UserStatView.swift in Sources */,
 				8479FC7D2C511E8200E36F3F /* InstagramCloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,6 +35,7 @@ struct MainTabBarView: View {
                     Image(systemName: "house")
                 }
         }
+        .accentColor(.black)
         
     }
 }
