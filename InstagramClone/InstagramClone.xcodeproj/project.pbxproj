@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84756CE72C6E47C800D939F8 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84756CE62C6E47C800D939F8 /* UserStatView.swift */; };
+		84756CE92C6FDD4500D939F8 /* GridTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84756CE82C6FDD4500D939F8 /* GridTest.swift */; };
 		8479FC7D2C511E8200E36F3F /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479FC7C2C511E8200E36F3F /* InstagramCloneApp.swift */; };
 		8479FC7F2C511E8200E36F3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479FC7E2C511E8200E36F3F /* ContentView.swift */; };
 		8479FC812C511E8300E36F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8479FC802C511E8300E36F3F /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		84756CE62C6E47C800D939F8 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
+		84756CE82C6FDD4500D939F8 /* GridTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTest.swift; sourceTree = "<group>"; };
 		8479FC792C511E8200E36F3F /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8479FC7C2C511E8200E36F3F /* InstagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneApp.swift; sourceTree = "<group>"; };
 		8479FC7E2C511E8200E36F3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				8479FC912C51731C00E36F3F /* ProfileView.swift */,
+				84756CE82C6FDD4500D939F8 /* GridTest.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				8479FC8F2C5121B200E36F3F /* MainTabBarView.swift in Sources */,
 				84756CE72C6E47C800D939F8 /* UserStatView.swift in Sources */,
 				8479FC7D2C511E8200E36F3F /* InstagramCloneApp.swift in Sources */,
+				84756CE92C6FDD4500D939F8 /* GridTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

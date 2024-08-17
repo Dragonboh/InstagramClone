@@ -17,22 +17,22 @@ struct MainTabBarView: View {
             
             Text("Search")
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "magnifyingglass")
                 }
             
             Text("Upload Post")
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "plus.square")
                 }
             
             Text("Notifications")
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "heart")
                 }
             
-            Text("Profile")
+           ProfileView()
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "person")
                 }
         }
         .accentColor(.black)
