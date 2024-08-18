@@ -25,6 +25,13 @@ struct FeedView: View {
                     Image(systemName: "paperplane")
                         .imageScale(.large)
                 }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    Image("Logo-Instagram")
+                        .resizable()
+                        .frame(width: 100, height: 56)
+                        
+                }
             })
         }
     }
