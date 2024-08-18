@@ -30,11 +30,7 @@ struct GridTest: View {
                     }
                 }
                 .background(.black)
-//                .padding(.vertical)
-//                .background(.gray)
-
-                
-                
+                .frame(height: 231)
                 Rectangle().fill(.blue)
             }
         }
