@@ -8,23 +8,31 @@
 import SwiftUI
 
 struct FeedCell: View {
+    private let post: Post
+    
+    init(post: Post) {
+        self.post = post
+    }
+    
     var body: some View {
         VStack {
             //Image + username
-            HStack {
-                Image("dragon-6")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 40, height: 40)
-                    .clipShape(Circle())
-                
-                Text("Dragon")
-                    .font(.footnote)
-                    .fontWeight(.semibold)
+            if let user = post.user {
+                HStack {
+                    Image(user.profileImageUrl ?? "")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())
                     
-                Spacer()
+                    Text(user.username)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                        
+                    Spacer()
+                }
+                .padding(.leading, 8)
             }
-            .padding(.leading, 8)
             
             // Post Image
 //            GeometryReader { geo in
@@ -33,7 +41,7 @@ struct FeedCell: View {
 //                    .scaledToFill()
 //                    .frame(width: geo.size.width)
 //            }
-            Image("dragon-6")
+            Image(post.imageUrl)
                 .resizable()
 //                .scaledToFill()
 //                .aspectRatio(contentMode: .fill)
@@ -73,7 +81,7 @@ struct FeedCell: View {
             .foregroundStyle(.black)
             
             // likes label
-            Text("23 lieks")
+            Text("\(post.likes) lieks")
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -82,9 +90,9 @@ struct FeedCell: View {
             
             // caption Label
             HStack {
-                Text("Dragon")
+                Text("\(post.user?.username ?? "") ")
                     .fontWeight(.semibold) +
-                Text("This is some test caption for now, this is test caption for now")
+                Text(post.caption)
             }
             .font(.footnote)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -102,5 +110,5 @@ struct FeedCell: View {
 }
 
 #Preview {
-    FeedCell()
+    FeedCell(post: Post.MOCK_POSTS[0])
 }

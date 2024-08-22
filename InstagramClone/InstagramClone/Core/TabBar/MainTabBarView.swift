@@ -30,10 +30,10 @@ struct MainTabBarView: View {
                     Image(systemName: "heart")
                 }
             
-           ProfileView()
+            CurrentProfileView()
                 .tabItem {
                     Image(systemName: "person")
-                }
+            }
         }
         .accentColor(.black)
         

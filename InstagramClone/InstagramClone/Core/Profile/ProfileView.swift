@@ -9,21 +9,27 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    let user: User
+    
     private let gridItems: [GridItem] = [
         .init(.flexible(),spacing: 1),
         .init(.flexible(),spacing: 1),
         .init(.flexible(),spacing: 1)
     ]
     
+    var posts: [Post] {
+        return Post.MOCK_POSTS.filter { post in
+            post.user?.username == user.username
+        }
+    }
     
     var body: some View {
-        NavigationStack {
             ScrollView {
                 // header
                 VStack(spacing: 10) {
                     // pickture and stats
                     HStack {
-                        Image("dragon-1")
+                        Image(user.profileImageUrl ?? "")
                             .resizable()
                             .frame(width: 80, height: 80)
                             .clipShape(Circle())
@@ -39,13 +45,16 @@ struct ProfileView: View {
                     
                     //name and bio
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Chadwick Bozeman")
-                            .font(.footnote)
-                            .fontWeight(.semibold)
+                        if let fullname = user.fullname {
+                            Text(fullname)
+                                .fontWeight(.semibold)
+                        }
                         
-                        Text("Wakanda Forever")
-                            .font(.footnote)
+                        if let bio = user.bio {
+                            Text(bio)
+                        }
                     }
+                    .font(.footnote)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                     
@@ -68,36 +77,31 @@ struct ProfileView: View {
                 }
                 
                 // post grid view
-                LazyVGrid(columns: gridItems, spacing: 2, content: {
-                    ForEach(2..<10) { index in
-                        Image("dragon-\(index)")
-                            .resizable()
-                            .scaledToFill()
-                    }
+                GeometryReader(content: { geometry in
+                    let height = calculateHeight(width: geometry.size.width)
                     
-                    ForEach(2..<10) { index in
-                        Image("dragon-\(index)")
-                            .resizable()
-                            .scaledToFill()
-                    }
+                    LazyVGrid(columns: gridItems, spacing: 2, content: {
+                        ForEach(posts) { post in
+                            Image(post.imageUrl)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(height: height)
+                        }
+                    })
                 })
             }
+            .padding(.top)
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar(content: {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        
-                    }, label: {
-                        Image(systemName: "line.3.horizontal")
-                            .foregroundStyle(.black)
-                    })
-                }
-            })
-        }
+    }
+    
+    private func calculateHeight(width: CGFloat) -> CGFloat {
+        var height = width / 3
+        height = height - CGFloat(gridItems.count) + 1
+        return height
     }
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(user: User.MOCK_ONE_USER)
 }
