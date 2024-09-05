@@ -24,6 +24,8 @@
 		84756D072C74D1C800D939F8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84756D062C74D1C800D939F8 /* Post.swift */; };
 		84756D0A2C74FDB000D939F8 /* UIWindow+UIScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84756D092C74FDB000D939F8 /* UIWindow+UIScene.swift */; };
 		84756D0C2C76012E00D939F8 /* SearchProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84756D0B2C76012E00D939F8 /* SearchProfileView.swift */; };
+		84756D102C7764CA00D939F8 /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84756D0F2C7764CA00D939F8 /* UploadPostView.swift */; };
+		84756D162C8A0E3900D939F8 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84756D152C8A0E3900D939F8 /* UploadPostViewModel.swift */; };
 		8479FC7D2C511E8200E36F3F /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479FC7C2C511E8200E36F3F /* InstagramCloneApp.swift */; };
 		8479FC7F2C511E8200E36F3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479FC7E2C511E8200E36F3F /* ContentView.swift */; };
 		8479FC812C511E8300E36F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8479FC802C511E8300E36F3F /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		84756D062C74D1C800D939F8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		84756D092C74FDB000D939F8 /* UIWindow+UIScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+UIScene.swift"; sourceTree = "<group>"; };
 		84756D0B2C76012E00D939F8 /* SearchProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProfileView.swift; sourceTree = "<group>"; };
+		84756D0F2C7764CA00D939F8 /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
+		84756D152C8A0E3900D939F8 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		8479FC792C511E8200E36F3F /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8479FC7C2C511E8200E36F3F /* InstagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneApp.swift; sourceTree = "<group>"; };
 		8479FC7E2C511E8200E36F3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +130,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		84756D0E2C7764B200D939F8 /* UploadPost */ = {
+			isa = PBXGroup;
+			children = (
+				84756D0F2C7764CA00D939F8 /* UploadPostView.swift */,
+				84756D152C8A0E3900D939F8 /* UploadPostViewModel.swift */,
+			);
+			path = UploadPost;
+			sourceTree = "<group>";
+		};
 		8479FC702C511E8200E36F3F = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +180,7 @@
 		8479FC8A2C51218400E36F3F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				84756D0E2C7764B200D939F8 /* UploadPost */,
 				84756CF22C7240C500D939F8 /* Authentication */,
 				84756CEF2C723D9500D939F8 /* Search */,
 				84756CEA2C71066E00D939F8 /* Feed */,
@@ -269,6 +283,7 @@
 				84756CFC2C73891500D939F8 /* CreateUsernameView.swift in Sources */,
 				84756CEC2C71067B00D939F8 /* FeedView.swift in Sources */,
 				84756CF12C723DA100D939F8 /* SearchView.swift in Sources */,
+				84756D102C7764CA00D939F8 /* UploadPostView.swift in Sources */,
 				84756D0C2C76012E00D939F8 /* SearchProfileView.swift in Sources */,
 				84756CFA2C7296C200D939F8 /* IGTextField.swift in Sources */,
 				8479FC922C51731C00E36F3F /* ProfileView.swift in Sources */,
@@ -276,6 +291,7 @@
 				84756CF82C72949500D939F8 /* IGTextFieldModifier.swift in Sources */,
 				84756D032C73CAA500D939F8 /* User.swift in Sources */,
 				84756D052C74A17F00D939F8 /* CurrentProfileView.swift in Sources */,
+				84756D162C8A0E3900D939F8 /* UploadPostViewModel.swift in Sources */,
 				8479FC8F2C5121B200E36F3F /* MainTabBarView.swift in Sources */,
 				84756CE72C6E47C800D939F8 /* UserStatView.swift in Sources */,
 				84756CEE2C71068A00D939F8 /* FeedCell.swift in Sources */,
